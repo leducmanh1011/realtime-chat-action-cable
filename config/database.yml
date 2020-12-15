@@ -1,0 +1,30 @@
+# MySQL. Versions 5.5.8 and up are supported.
+#
+# Install the MySQL driver
+#   gem install mysql2
+#
+# Ensure the MySQL gem is defined in your Gemfile
+#   gem 'mysql2'
+#
+# And be sure to use new-style password hashing:
+#   https://dev.mysql.com/doc/refman/5.7/en/password-hashing.html
+#
+default: &default
+  adapter: mysql2
+  encoding: utf8mb4
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: root
+  password: password
+  socket: /var/run/mysqld/mysqld.sock
+
+development:
+  <<: *default
+  database: realtime_chat_action_cable
+test:
+  <<: *default
+  database: realtime_chat_action_cable_test
+production:
+  <<: *default
+  database: realtime_chat_action_cable_production
+  username: realtime_chat_action_cable
+  password: <%= ENV['REALTIME_CHAT_ACTION_CABLE_DATABASE_PASSWORD'] %>
