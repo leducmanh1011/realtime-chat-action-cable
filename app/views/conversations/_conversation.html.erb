@@ -4,7 +4,7 @@
     <img src="http://emilcarlsson.se/assets/louislitt.png" alt="" />
     <div class="meta">
       <p class="name"><%= conversation.friend(current_user).email %></p>
-      <p class="preview"><%= conversation.messages.last ? conversation.messages.last : "Hãy bắt đầu cuộc trò chuyện" %></p>
+      <p class="preview"><%= conversation.messages.last ? conversation.messages.last.content : "Hãy bắt đầu cuộc trò chuyện" %></p>
     </div>
   </div>
 </li>

@@ -1,0 +1,11 @@
+<% if message.sender_id == current_user.id %>
+  <li class="sent">
+    <img src="<%= get_current_user_img(current_user.id) %>" alt="" />
+    <p><%= message.content %></p>
+  </li>
+<% else %>
+  <li class="replies">
+    <img src="<%= get_current_user_img(message.sender_id) %>" alt="" />
+    <p><%= message.content %></p>
+  </li>
+<% end %>
