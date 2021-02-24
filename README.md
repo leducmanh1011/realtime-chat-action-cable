@@ -1,24 +1,10 @@
-# README
+# Simple chat app
+A simple chat app build by Ruby on Rails
+- Boostrap template free
+- Action Cable
+- Rails 6
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Evidences
+![image](https://user-images.githubusercontent.com/46446038/108946408-f56f1c80-7690-11eb-856f-39598a0e716a.png)
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+![image](https://user-images.githubusercontent.com/46446038/108946416-fc962a80-7690-11eb-907d-4308ec4e98de.png)
