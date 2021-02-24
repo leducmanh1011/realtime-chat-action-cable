@@ -10,7 +10,7 @@ const conversationChannel = consumer.subscriptions.create("ConversationChannel",
   },
 
   received(data) {
-    $('<li class="replies"><img src="'+ getImg(data.message.receiver_id) +'" alt="" /><p>' + data.message.content + '</p></li>').appendTo($('.messages ul'));
+    $('<li class="replies"><img src="'+ getImg(data.message.sender_id) +'" alt="" /><p>' + data.message.content + '</p></li>').appendTo($('.messages ul'));
   }
 });
 
