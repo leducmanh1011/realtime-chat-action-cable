@@ -137,7 +137,7 @@
       <div class="wrap">
         <%= hidden_field_tag :sender_id, current_user.id %>
         <%= form_with model: @message do |f| %>
-          <%= f.text_field :content, placeholder: "Write your message...", id: "message", remote: true %>
+          <%= f.text_field :content, placeholder: "Write your message...", id: "message", remote: true, autocomplete: "off" %>
           <i class="fa fa-paperclip attachment" aria-hidden="true"></i>
           <%= f.hidden_field :receiver_id, value: @first_conversation.friend(current_user).id %>
           <%= f.hidden_field :conversation_id, value: @first_conversation.id %>
